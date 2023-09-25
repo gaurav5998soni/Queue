@@ -1,0 +1,31 @@
+package com.coding.challange.queue;
+
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.lang.Integer;
+
+public class PriorityQueueForInteger {
+    public static void main(String[] str) {
+
+        PriorityQueue<Integer> pq2 = new PriorityQueue<>((x,y) -> x-y);
+        pq2.add(100);
+        pq2.add(1);
+        pq2.add(11);
+        pq2.add(10);
+        pq2.add(19);
+        pq2.add(21);
+
+        System.out.println(pq2);
+
+        PriorityQueue<Integer> pq1 = new PriorityQueue<>(Comparator.comparingInt(x -> x));
+        pq1.add(100);
+        pq1.add(1);
+        pq1.add(11);
+        pq1.add(10);
+        pq1.add(19);
+        pq1.add(21);
+
+        System.out.println(pq1);
+
+    }
+}
